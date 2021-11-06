@@ -23,17 +23,17 @@ public class Sale {
 	
 	@ManyToOne
 	@JoinColumn(name = "seller_id")
-	private Seller seleer;
+	private Seller seller;
 	
 	public Sale() {}
 
-	public Sale(Long id, Integer visited, Integer deals, Double amount, LocalDate date, Seller seleer) {
+	public Sale(Long id, Integer visited, Integer deals, Double amount, LocalDate date, Seller seller) {
 		this.id = id;
 		this.visited = visited;
 		this.deals = deals;
 		this.amount = amount;
 		this.date = date;
-		this.seleer = seleer;
+		this.seller = seller;
 	}
 
 	public Long getId() {
@@ -77,11 +77,11 @@ public class Sale {
 	}
 
 	public Seller getSeleer() {
-		return seleer;
+		return seller;
 	}
 
-	public void setSeleer(Seller seleer) {
-		this.seleer = seleer;
+	public void setSeleer(Seller seller) {
+		this.seller = seller;
 	}
 	
 }
